@@ -10,7 +10,6 @@ function refresh() {
             let id = element.childNodes[1].childNodes[1].innerText;
             let request = new XMLHttpRequest();
             let server = window.location.hostname;
-            //request https://results.szeged2024.com/broadcast/competition/1/futamstatusz/+id
             request.open('GET', 'https://' + server + '/broadcast/competition/1/futamstatusz/' + id, true);
             request.onload = function () {
                 let data = request.responseText;
