@@ -1,5 +1,5 @@
 p = document.createElement("div");
-p.innerHTML = '<label for="interval">frissítés</label><input type="number" id="interval" value="60"><label for="scroll">Auro scroll</label><input type="checkbox" id="scroll">';
+p.innerHTML = '<label for="interval">frissítés</label><input type="number" id="interval" value="60"><label for="scroll">Auro scroll</label><input type="checkbox" id="scroll"><input type="button" value="Refresh" onClick="refresh();">';
 p.style = 'position: -webkit-sticky;position: sticky;top: 0; border: 1px solid black; z-index:999;background-color: white;';
 document.body.insertBefore(p, document.body.firstChild);
 
