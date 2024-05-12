@@ -2,7 +2,8 @@
 // @name         Digicorp Refresher
 // @namespace    http://hbj.hu/
 // @version      v1.0
-// @description  try to take over the world!
+// @description  Auto refresh and scroll for digicorp results page
+// @downloadURL  https://github.com/hallabalint/digicorp-refresher/releases/latest/download/index.tamper.js
 // @author       You
 // @match        https://results.szeged2024.com/results/*
 // @grant        none
