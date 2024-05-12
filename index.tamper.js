@@ -1,4 +1,17 @@
-let p = document.createElement("div");
+// ==UserScript==
+// @name         Digicorp Refresher
+// @namespace    http://hbj.hu/
+// @version      v1.0
+// @description  try to take over the world!
+// @author       You
+// @match        https://results.szeged2024.com/results/*
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    let p = document.createElement("div");
 p.innerHTML = '<label for="interval">Refresh interval (s)</label><input type="number" id="interval" value="60"><label for="scroll">Auto scroll</label><input type="checkbox" id="scroll"><input type="button" value="Refresh" onClick="refresh();">';
 p.style = 'position: -webkit-sticky;position: sticky;top: 0; border: 1px solid black; z-index:999;background-color: white;';
 document.body.insertBefore(p, document.body.firstChild);
@@ -40,3 +53,5 @@ document.getElementById("interval").onchange = function () {
     updater = setInterval(refresh, this.value * 1000);
 }
 refresh();
+
+})();
