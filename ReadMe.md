@@ -1,7 +1,7 @@
 # Digicorp canoe results auto updater
 
 ## Tamper Monkey
-If Tampermonkey is installed on your device, [click here](https://github.com/hallabalint/digicorp-refresher/releases/latest/download/index.tamper.js).<br>
+If Tampermonkey is installed on your device, [click here](https://github.com/hallabalint/digicorp-refresher/releases/latest/download/index.user.js).<br>
 To add missing match attribute, please submit an issue.
 
 ## Manual methord
