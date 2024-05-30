@@ -19,14 +19,16 @@ function refresh() {
                 if (data[1] == 'official') {
                     element.setAttribute("closed", "true");
                     element.classList.add("closed");
+                    element.classList.add("colored");
                     element.style.backgroundColor = "#99ffcc";
                 }
                 if (data[1] == 'unofficial') {
+                    element.classList.add("colored");
                     element.style.backgroundColor = "#99ccff";
                 }
                 if (document.getElementById("scroll").checked) {
-                    let closed = document.getElementsByClassName("closed");
-                    closed[closed.length - 1].scrollIntoView({ block: "center" });
+                    let colored = document.getElementsByClassName("colored");
+                    colored[colored.length - 1].scrollIntoView({ block: "center" });
                 }
             }
             request.send();

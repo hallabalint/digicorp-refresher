@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Digicorp Refresher
 // @namespace    http://hbj.hu/
-// @version      1.2
+// @version      2.0
 // @description  Auto refresh and scroll for digicorp results page
 // @downloadURL  https://github.com/hallabalint/digicorp-refresher/releases/latest/download/index.user.js
 // @author       github.com/hallabalint
@@ -33,14 +33,16 @@
                     if (data[1] == 'official') {
                         element.setAttribute("closed", "true");
                         element.classList.add("closed");
+                        element.classList.add("colored");
                         element.style.backgroundColor = "#99ffcc";
                     }
                     if (data[1] == 'unofficial') {
+                        element.classList.add("colored");
                         element.style.backgroundColor = "#99ccff";
                     }
                     if (document.getElementById("scroll").checked) {
-                        let closed = document.getElementsByClassName("closed");
-                        closed[closed.length - 1].scrollIntoView({ block: "center" });
+                        let colored = document.getElementsByClassName("colored");
+                        colored[colored.length - 1].scrollIntoView({ block: "center" });
                     }
                 }
                 request.send();
