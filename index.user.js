@@ -3,8 +3,8 @@
 // @namespace    http://hbj.hu/
 // @version      v1.2
 // @description  Auto refresh and scroll for digicorp results page
-// @downloadURL  https://github.com/hallabalint/digicorp-refresher/releases/latest/download/index.tamper.js
-// @updateURL    https://github.com/hallabalint/digicorp-refresher/releases/latest/download/index.tamper.js
+// @downloadURL  https://github.com/hallabalint/digicorp-refresher/releases/latest/download/index.user.js
+// @updateURL    https://github.com/hallabalint/digicorp-refresher/releases/latest/download/index.user.js
 // @author       github.com/hallabalint
 // @match        https://results.szeged2024.com/results/*
 // @grant        none
