@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         Digicorp Refresher
 // @namespace    http://hbj.hu/
-// @version      2.0
+// @version      3.1
 // @description  Auto refresh and scroll for digicorp results page
 // @downloadURL  https://github.com/hallabalint/digicorp-refresher/releases/latest/download/index.user.js
 // @author       github.com/hallabalint
 // @match        https://results.szeged2024.com/results/*
+// @match        https://results.szeged2025.com/results/*
 // @grant        none
 // ==/UserScript==
 
