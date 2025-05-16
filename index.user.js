@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Digicorp Refresher
 // @namespace    http://hbj.hu/
-// @version      3.3
+// @version      3.4
 // @description  Auto refresh and scroll for digicorp results page
 // @downloadURL  https://github.com/hallabalint/digicorp-refresher/releases/latest/download/index.user.js
 // @updateURL    https://github.com/hallabalint/digicorp-refresher/releases/latest/download/index.user.js
@@ -15,7 +15,7 @@
     'use strict';
 
     let p = document.createElement("div");
-    p.innerHTML = '<label for="interval">Refresh interval (s)</label><input type="number" id="interval" value="60"><label for="scroll">Auto scroll</label><input type="checkbox" id="scroll"><label for="scroll">Last race instensive update</label><input type="checkbox" id="force"><input type="button" value="Refresh" onClick="refresh();">';
+    p.innerHTML = '<label for="interval">Refresh interval (s)</label><input type="number" id="interval" value="60"><label for="scroll">Auto scroll</label><input type="checkbox" id="scroll"><label for="scroll">Last race intensive update</label><input type="checkbox" id="force"><input type="button" value="Refresh" onClick="refresh();">';
     p.style = 'position: -webkit-sticky;position: sticky;top: 0; border: 1px solid black; z-index:999;background-color: white;';
     document.body.insertBefore(p, document.body.firstChild);
     loadConfig();
@@ -76,11 +76,17 @@
     }
     );
 
+    document.getElementById("force").addEventListener('change', (event) => {
+        saveConfig();
+    }
+    );
+
     function saveConfig() {
         console.log("Saving config");
         let config = {
             interval: document.getElementById("interval").value,
-            scroll: document.getElementById("scroll").checked
+            scroll: document.getElementById("scroll").checked,
+            force: document.getElementById("force").checked
         };
         localStorage.setItem('UpdaterConfig', JSON.stringify(config));
 
@@ -94,6 +100,7 @@
             console.log(config);
             document.getElementById("interval").value = config.interval;
             document.getElementById("scroll").checked = config.scroll;
+            document.getElementById("force").checked = config.force;
         }
     }
 
@@ -148,6 +155,6 @@
         }
     }
 
-    setInterval(lastrave, 1000);
+    setInterval(lastrace, 1000);
 
 })();
