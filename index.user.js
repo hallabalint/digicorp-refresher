@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Digicorp Refresher
 // @namespace    http://hbj.hu/
-// @version      3.5
+// @version      3.6
 // @description  Auto refresh and scroll for digicorp results page
 // @downloadURL  https://github.com/hallabalint/digicorp-refresher/releases/latest/download/index.user.js
 // @updateURL    https://github.com/hallabalint/digicorp-refresher/releases/latest/download/index.user.js
@@ -117,7 +117,7 @@
             if (lastClosedIndex >= 0 && lastClosedIndex < races.length - 1) {
                 let nextRace = races[lastClosedIndex + 1];
                 let date = nextRace.childNodes[3].childNodes[1].innerText;
-                const now = Date();
+                var now = new Date();
                 const [inputHours, inputMinutes] = date.split(":");
                 let raceDate = new Date(
                     now.getFullYear(),

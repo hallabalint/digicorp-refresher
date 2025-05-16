@@ -101,7 +101,7 @@ function lastRace() {
         if (lastClosedIndex >= 0 && lastClosedIndex < races.length - 1) {
             let nextRace = races[lastClosedIndex + 1];
             let date = nextRace.childNodes[3].childNodes[1].innerText;
-            const now = Date();
+            var now = new Date();
             const [inputHours, inputMinutes] = date.split(":");
             let raceDate = new Date(
                 now.getFullYear(),
