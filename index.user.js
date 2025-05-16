@@ -155,6 +155,6 @@
         }
     }
 
-    setInterval(lastRace, 1000);
+    setInterval(lastRace, 2000);
 
 })();
