@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Digicorp Refresher
 // @namespace    http://hbj.hu/
-// @version      3.4
+// @version      3.5
 // @description  Auto refresh and scroll for digicorp results page
 // @downloadURL  https://github.com/hallabalint/digicorp-refresher/releases/latest/download/index.user.js
 // @updateURL    https://github.com/hallabalint/digicorp-refresher/releases/latest/download/index.user.js
@@ -155,6 +155,6 @@
         }
     }
 
-    setInterval(lastrace, 1000);
+    setInterval(lastRace, 1000);
 
 })();

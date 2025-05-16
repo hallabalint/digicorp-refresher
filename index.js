@@ -139,4 +139,4 @@ function lastRace() {
     }
 }
 
-setInterval(lastrace, 1000);
+setInterval(lastRace, 1000);
